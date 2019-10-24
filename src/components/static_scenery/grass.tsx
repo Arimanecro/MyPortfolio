@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from "react";
 
-//height child = 38px + 12px = 50
-//height parent = 290
+//height of child = 38px + 12px = 50
+//height of parent = 290
 
 function up() {
   if (count1) {
