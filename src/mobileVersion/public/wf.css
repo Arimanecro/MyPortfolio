@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "KreepTown";
+  src: url("/public/wf/KreepTown.eot?#iefix") format("embedded-opentype"),
+    url("/public/wf/KreepTown.woff") format("woff"),
+    url("/public/wf/KreepTown.ttf") format("truetype"),
+    url("/public/wf/KreepTown.svg#KreepTown") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ZOMBIESSTATION";
+  src: url("/public/wf/ZOMBIESSTATION.eot?#iefix") format("embedded-opentype"),
+    url("/public/wf/ZOMBIESSTATION.woff") format("woff"),
+    url("/public/wf/ZOMBIESSTATION.ttf") format("truetype"),
+    url("/public/wf/ZOMBIESSTATION.svg#ZOMBIESSTATION") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "B52";
+  src: url("/public/wf/b52.eot");
+  src: url("/public/wf/b52.woff") format("woff"),
+    url("/public/wf/b52.ttf") format("truetype"), url("/public/wf/b52.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
