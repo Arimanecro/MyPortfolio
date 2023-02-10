@@ -1,0 +1,29 @@
+---
+import Buttons from "./UI/btns-grass.svelte";
+---
+
+<div id="grass">
+  <div id="scrollBar">
+    <Buttons client:only="svelte"/>
+  </div>
+</div>
+
+<style>
+  #grass {
+    width: 100%;
+    height: 39px;
+    background: url("/img/grass.jpg");
+    position: absolute;
+    z-index: 4;
+    bottom: 0px;
+  }
+  #scrollBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 262px;
+    height: inherit;
+    float: right;
+    position: relative;
+  }
+</style>

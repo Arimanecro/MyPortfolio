@@ -1,0 +1,47 @@
+<style>
+  .hand_one {
+    width: 56px;
+    height: 83px;
+    background: url(/img/bug.png) no-repeat;
+    position: absolute;
+    transform: rotate(-22deg);
+    bottom: 10px;
+    left: 778px;
+    animation: hands 0.85s ease-out infinite;
+  }
+
+  #hand_two {
+    left: 830px;
+    transform: rotateY(-180deg) rotateZ(-2deg);
+    animation: handstwo 0.85s ease-out infinite;
+  }
+  @keyframes hands {
+    0% {
+      bottom: 8px;
+    }
+    50% {
+      bottom: 25px;
+    }
+    100% {
+      bottom: 8px;
+    }
+  }
+
+  @keyframes handstwo {
+    0% {
+      bottom: 8px;
+    }
+    10% {
+      bottom: 25px;
+    }
+    50% {
+      bottom: 8px;
+    }
+    100% {
+      bottom: 8px;
+    }
+  }
+</style>
+
+<div class="hand_one"></div>
+<div class="hand_one" id="hand_two"></div>

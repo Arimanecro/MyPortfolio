@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import Cemetery from "../components/cemetery.astro";
+import Grass from "./grass.astro";
+import Coffin from "./coffin.astro";
+import Ghost from "./ghost.astro";
+import Hands from "./hands.astro";
+import Reference from "./UI/reference.svelte";
+import Characters from "./characters.svelte";
+import StackMenu from "./stackMenu.svelte";
+import Underground from "./underground.astro";
+import Wizard from "./wizard.svelte";
+import Portal from "./portal.svelte";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😈</text></svg>" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Serghey Didac::Full-Stack Web Dev</title>
+  </head>
+  <script>
+    localStorage.first = "0px";
+  </script>
+  <body>
+    <Cemetery>
+      <Grass />
+      <Coffin />
+      <Ghost />
+      <StackMenu client:only="svelte" />
+      <Wizard client:only="svelte" />
+      <Portal client:idle />
+      <Hands />
+      <Reference client:only="svelte" />
+      <Characters client:only="svelte" />
+    </Cemetery>
+    <Underground />
+  </body>
+</html>

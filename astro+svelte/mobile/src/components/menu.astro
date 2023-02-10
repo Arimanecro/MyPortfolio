@@ -1,0 +1,17 @@
+---
+import Panel from "./categories/panel.svelte";
+import Nav from "./UI/nav.svelte";
+---
+<div class="wrapp_menu">
+  <Nav client:only="svelte" />
+  <Panel client:only="svelte" />
+</div>
+
+<style>
+  .wrapp_menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

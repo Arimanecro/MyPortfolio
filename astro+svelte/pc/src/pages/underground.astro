@@ -1,0 +1,245 @@
+<style>
+  #wrapper_undeground {
+    width: 100%;
+    height: auto;
+    /* height: calc(100% - 400px); */
+    background: #60321a;
+  }
+  #undeground {
+    width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    background: url(/img/undeground.jpg) no-repeat, #7f3e16;
+    position: relative;
+  }
+  #dev {
+    width: 92px;
+    height: 110px;
+    background: url(/img/dev.png) no-repeat;
+    position: absolute;
+    right: 486px;
+    top: 100px;
+  }
+  .leg {
+    width: 25px;
+    height: 59px;
+    background: url(/img/leg.png) no-repeat;
+    position: absolute;
+    right: 499px;
+    top: 198px;
+    transform-origin: top;
+    animation: leftLeg 4s linear infinite;
+  }
+  #leg_two {
+    right: 539px;
+    animation: rightLeg 4s linear infinite;
+  }
+  #laptop {
+    width: 73px;
+    height: 45px;
+    background: url(/img/laptop.jpg) no-repeat;
+    position: absolute;
+    right: 488px;
+    top: 159px;
+    z-index: 2;
+  }
+  #wifi {
+    width: 34px;
+    height: 48px;
+    background: url(/img/wifi.svg) no-repeat bottom;
+    background-size: contain;
+    position: absolute;
+    z-index: 3;
+    right: 516px;
+    top: 153px;
+  }
+  #wrapper_infoBlocks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+  #about_portfolio {
+    color: #14dcb7;
+    text-align: left;
+    font-family: "KreepTown";
+    font-size: 21px;
+    line-height: 32px;
+    padding: 0 10px;
+  }
+  #about_portfolio > li {
+    margin-bottom: 20px;
+  }
+  .infoBlock {
+    width: 49.8%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.71);
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+  }
+  .infoBlock h1,
+  .frontend h1 {
+    color: #e8e3e3;
+    font-family: "KreepTown";
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    padding-bottom: 28px;
+  }
+  .contact p {
+    padding-right: 5px;
+    text-align: right;
+    line-height: 45px;
+  }
+  .contact p span {
+    text-decoration: underline;
+  }
+
+  .contact h1 {
+    margin: 0 auto;
+  }
+  .infostring {
+    color: #dfb200;
+    font-size: 26px;
+    font-family: "B52";
+  }
+  .infostring > span { 
+    text-decoration: underline;
+  }
+  
+  .frontend {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-bottom: 32px;
+    padding-left: 10px;
+  }
+  .frontend h1 {
+    color: #3e8216;
+    font-size: 24px;
+    text-decoration: none;
+    padding-bottom: 0px;
+  }
+  .frontend ul {
+    margin-top: 16px;
+  }
+  .frontend ul > li {
+    display: block;
+    margin-bottom: 10px;
+    color: #8612f6;
+    font-size: 18px;
+    font-family: "KreepTown";
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  .pdf {
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+    display: inline-block;
+    background: url("/img/html2.png") no-repeat;
+    background-size: contain;
+  }
+  ul {
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+  }
+  ul li:before {
+    content: "- ";
+    position: absolute;
+    left: 0;
+  }
+  @keyframes leftLeg {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes rightLeg {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+</style>
+
+<section id="wrapper_undeground">
+  <div id="undeground">
+    <div id="dev"></div>
+    <div class="leg"></div>
+    <div id="leg_two" class="leg"></div>
+    <div id="laptop"></div>
+    <div id="wifi"></div>
+    <section id="wrapper_infoBlocks">
+      <div class="infoBlock">
+        <h1>skills</h1>
+        <div class="frontend">
+          <h1>frontend:</h1>
+          <ul>
+            <li>
+              javascript, typescript, svelte, astro, react, electron,
+              WebAssembly, AssemblyScript
+            </li>
+            <li>html, css</li>
+          </ul>
+        </div>
+        <div class="frontend">
+          <h1 style={{ color: "#c42d1d" }}>backend:</h1>
+          <ul>
+            <li>nodejs, sveltekit, fastify, nextjs, express, php, laravel</li>
+            <li>mysql, postgresql, mongodb, firebase, graphql</li>
+          </ul>
+        </div>
+        <div class="frontend">
+          <h1 style={{ color: "#2fc5bd" }}>mobile:</h1>
+          <ul>
+            <li>ionic, capacitor</li>
+          </ul>
+        </div>
+        <div class="frontend">
+          <h1 style={{ color: "#1648ea" }}>ci/cd</h1>
+          <ul>
+            <li>docker</li>
+          </ul>
+        </div>
+      </div>
+      <div class="infoBlock contact">
+        <h1>contacts</h1>
+        <p class="infostring"><span>FIRST NAME:</span> Serghey</p>
+        <p class="infostring"><span>LAST NAME:</span> Didac</p>
+        <p class="infostring"><span>LOCATION:</span> MOLDOVA</p>
+        <p class="infostring">arimanecro@gmail.com</p>
+        <p class="infostring"><span>Download CV:</span> <a href="/cv.html" class="pdf" download></a></p>
+      </div>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,142 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smooth: always;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  list-style-position: inside;
+  list-style-image: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "KreepTown";
+  src: url("/wf/KreepTown.eot?#iefix") format("embedded-opentype"),
+    url("/wf/KreepTown.woff") format("woff"),
+    url("/wf/KreepTown.ttf") format("truetype"),
+    url("/wf/KreepTown.svg#KreepTown") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZOMBIESSTATION";
+  src: url("/wf/ZOMBIESSTATION.eot?#iefix") format("embedded-opentype"),
+    url("/wf/ZOMBIESSTATION.woff") format("woff"),
+    url("/wf/ZOMBIESSTATION.ttf") format("truetype"),
+    url("/wf/ZOMBIESSTATION.svg#ZOMBIESSTATION") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "B52";
+  src: url("/wf/b52.eot");
+  src: url("/wf/b52.woff") format("woff"), url("/wf/b52.ttf") format("truetype"),
+    url("/wf/b52.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  width: 36px;
+  height: 30px;
+  margin-right: 8px;
+}
+.icon_js {
+  background: url(/img/signs/js.jpg) no-repeat;
+  background-size: contain;
+}
+.icon_node {
+  background: url(/img/signs/node.png) no-repeat;
+  background-size: contain;
+}
+.icon_express {
+  background: url(/img/signs/express.png) no-repeat;
+  background-size: contain;
+}
+.icon_ts {
+  background: url(/img/signs/ts.jpg) no-repeat;
+  background-size: contain;
+}
+.icon_react {
+  background: url(/img/signs/react.png) no-repeat;
+  background-size: contain;
+}
+.icon_pwa {
+  background: url(/img/signs/pwa.png) no-repeat center;
+  background-size: contain;
+}
+.icon_php {
+  background: url(/img/signs/php.png) no-repeat;
+  background-size: contain;
+}
+.icon_mysql {
+  background: url(/img/signs/mysql.jpg) no-repeat;
+  background-size: contain;
+}
+.icon_mongo {
+  background: url(/img/signs/mongo.jpg) no-repeat;
+  background-size: contain;
+}
+.icon_firebase {
+  background: url(/img/signs/firebase.png) no-repeat;
+  background-size: contain;
+}
+.icon_graphql {
+  background: url(/img/signs/GraphQL.png) no-repeat;
+  background-size: contain;
+}
+.icon_electron {
+  background: url(/img/signs/electron.png) no-repeat;
+  background-size: contain;
+}
+.icon_webassembly {
+  background: url(/img/signs/wa.png) no-repeat;
+  background-size: contain;
+}
+.icon_fastify {
+  background: url(/img/signs/fastify.png) no-repeat;
+  background-size: contain;
+}
+.icon_ionic {
+  background: url(/img/signs/ionic.png) no-repeat;
+  background-size: contain;
+}
+.icon_astro {
+  background: url(/img/signs/astro.svg) no-repeat;
+  background-size: contain;
+}
+.icon_svelte {
+  background: url(/img/signs/svelte.svg) no-repeat;
+  background-size: contain;
+}

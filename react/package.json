@@ -1,0 +1,33 @@
+{
+  "name": "react-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.tsx",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "img": "^3.0.3",
+    "mobile-detect": "^1.4.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "shortid": "^2.2.14",
+    "styled-components": "^5.0.0-beta.8",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html  --public-url ./ --out-dir build/output --no-source-maps"
+  },
+  "browserslist": [
+        "last 1 Chrome versions"
+    ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,16 @@
+---
+var { top } = Astro.props;
+var position = top ? "top:0px" : "bottom:0px";
+---
+
+<div style={`${position}`} class="grass"></div>
+
+<style>
+  .grass {
+    width: 100%;
+    height: 31px;
+    background: url(/img/grass.jpg);
+    position: absolute;
+    z-index: 1;
+  }
+</style>
