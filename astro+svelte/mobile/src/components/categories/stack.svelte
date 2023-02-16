@@ -22,7 +22,10 @@
         repos = data.sort((a, b) => (a.id > b.id ? 1 : -1)).reverse();
         loading = 1;
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        error = 1;
+        console.error(error);
+      });
   }
 </script>
 
@@ -211,9 +214,9 @@
     background-size: contain;
   }
   .icon_astro {
-  background: url(/img/signs/astro.svg) no-repeat;
-  background-size: contain;
-}
+    background: url(/img/signs/astro.svg) no-repeat;
+    background-size: contain;
+  }
   @keyframes links {
     100% {
       margin-left: -2%;

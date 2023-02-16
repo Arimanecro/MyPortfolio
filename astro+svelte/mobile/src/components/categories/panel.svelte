@@ -1,23 +1,23 @@
-<script>
+<script context="module">
   import { ContextSettings } from "../../stores/settings-context.js";
   import BtnClose from "../UI/btnClose.svelte";
   import Contacts from "./contacts.svelte";
   import Skills from "./skills.svelte";
   import Stack from "./stack.svelte";
 
-/**
- * @typedef ListOfComponents
- * @type {object}
- * @property {Skills} Skills
- * @property {Contacts} Contacts
- * @property {Stack} Stack
- */
+  /**
+   * @typedef ListOfComponents
+   * @type {object}
+   * @property {Skills} Skills
+   * @property {Contacts} Contacts
+   * @property {Stack} Stack
+   */
 
- /** @type {ListOfComponents} */
+  /** @type {ListOfComponents} */
   var components = {
     Skills,
     Contacts,
-    Stack
+    Stack,
   };
 </script>
 
