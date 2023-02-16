@@ -48,9 +48,9 @@
     cursor: pointer;
   }
   .check {
-    background: url("/pc/img/select.png") no-repeat top left;
+    background: url("/img/select.png") no-repeat top left;
   }
   .uncheck {
-    background: url("/pc/img/unselect.png") no-repeat top left;
+    background: url("/img/unselect.png") no-repeat top left;
   }
 </style>

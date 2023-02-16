@@ -14,10 +14,10 @@
   /**
    * @type {string[]}
    */
-  $: repos = [];
+  $: repos = [,];
   /**
-   * 
-   * @param {HTMLElement} e 
+   *
+   * @param {HTMLElement} e
    */
   var onClick = (e) => {
     var { url, stack } = e.currentTarget.dataset;
@@ -46,13 +46,21 @@
     }
   };
 
+  $: if (repos.length > 1) {
   fetch("https://api.github.com/users/Arimanecro/repos")
     .then((response) => response.json())
     .then((data) => {
-      repos = data.sort((a, b) => (a.id > b.id ? 1 : -1)).reverse();
+      data
+        .sort((a, b) => (a.id > b.id ? 1 : -1))
+        .reverse()
+        .forEach((v) => {
+          !v.name.endsWith(".io") ? repos.push(v) : undefined;
+        });
+      repos = repos;
       loading = 1;
     })
     .catch((error) => console.error(error));
+  }
 </script>
 
 <div id="stacks">
@@ -63,11 +71,11 @@
       {#if !loading}
         <span class="loader" />
       {:else}
-        {#each repos as repo, key}
-          {#if repo.topics.length}
+        {#each repos as repo, key }
+        {#if key}
             <div
               class="wrapperStack"
-              style={(key === 1) ? "margin-top: 0px;" : null}
+              style={key === 1 ? "margin-top: 0px;" : null}
               id={key === 1 ? "first" : null}
               data-stack={`${repo.topics.toString()}`}
               data-url={repo.html_url}
@@ -83,8 +91,7 @@
                 {/each}
               </div>
             </div>
-          {/if}
-        {/each}
+          {/if}{/each}
       {/if}
     {:else}
       <p>Error!</p>
