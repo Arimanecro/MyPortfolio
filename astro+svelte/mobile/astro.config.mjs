@@ -1,7 +1,10 @@
 import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
-// https://astro.build/config
+
+var DEV = 0;
+
 export default defineConfig({
-    base: '/mobile',
+    base: DEV ? './' : '/mobile',
+    outDir:  DEV ? './dist' : '../../../production/mobile',
     integrations: [svelte()]
 });

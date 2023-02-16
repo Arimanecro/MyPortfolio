@@ -33,7 +33,7 @@
       {#if !loading}
         <span class="loader" />
       {:else}
-        {#each repos as repo, key}
+        {#each repos as repo}
           {#if repo.topics.length}
             <div class="wrapperStack">
               <a href={`${repo.html_url}`} target="_blank" class="git">
@@ -210,6 +210,10 @@
     background: url(/img/signs/wa.png) no-repeat;
     background-size: contain;
   }
+  .icon_astro {
+  background: url(/img/signs/astro.svg) no-repeat;
+  background-size: contain;
+}
   @keyframes links {
     100% {
       margin-left: -2%;
