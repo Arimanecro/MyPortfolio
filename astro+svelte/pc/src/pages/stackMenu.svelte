@@ -46,7 +46,6 @@
     }
   };
 
-  $: if (repos.length > 1) {
   fetch("https://api.github.com/users/Arimanecro/repos")
     .then((response) => response.json())
     .then((data) => {
@@ -60,7 +59,7 @@
       loading = 1;
     })
     .catch((error) => console.error(error));
-  }
+  
 </script>
 
 <div id="stacks">
