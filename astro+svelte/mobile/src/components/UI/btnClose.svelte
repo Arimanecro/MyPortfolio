@@ -2,6 +2,7 @@
 <script>
   import { ContextSettings } from "../../stores/settings-context.js";
 
+  export let category;
   /**
    *
    * @param {string} category
@@ -12,6 +13,7 @@
       ...settings,
       go: true,
       close: false,
+      category,
     }));
 </script>
 

@@ -1,33 +1,46 @@
-<div class="infoBlock">
-  <h1>skills</h1>
-  <div class="frontend">
-    <h1>frontend:</h1>
-    <ul>
-      <li>javascript, typescript, svelte, astro, react, electron,
-        WebAssembly, AssemblyScript</li>
+<script>
+  // @ts-check
+  import WrappCategories from "./wrappCategories.svelte";
+  /**
+   * @type {string}
+   */
+  var category = "skills";
+</script>
+
+<WrappCategories {category}>
+  <div class="infoBlock">
+    <h1>skills</h1>
+    <div class="frontend">
+      <h1>frontend:</h1>
+      <ul>
+        <li>
+          javascript, typescript, svelte, astro, react, electron, WebAssembly,
+          AssemblyScript
+        </li>
         <li>html, css</li>
-    </ul>
+      </ul>
+    </div>
+    <div class="frontend">
+      <h1 style="color: #c42d1d">backend:</h1>
+      <ul>
+        <li>nodejs, sveltekit, fastify, nextjs, express, php, laravel</li>
+        <li>mysql, postgresql, mongodb, firebase, graphql</li>
+      </ul>
+    </div>
+    <div class="frontend">
+      <h1 style="color: #2fc5bd">mobile:</h1>
+      <ul>
+        <li>ionic, capacitor</li>
+      </ul>
+    </div>
+    <div class="frontend">
+      <h1 style="color: #1648ea">ci/cd</h1>
+      <ul>
+        <li>docker</li>
+      </ul>
+    </div>
   </div>
-  <div class="frontend">
-    <h1 style="color: #c42d1d">backend:</h1>
-    <ul>
-      <li>nodejs, sveltekit, fastify, nextjs, express, php, laravel</li>
-      <li>mysql, postgresql, mongodb, firebase, graphql</li>
-    </ul>
-  </div>
-  <div class="frontend">
-    <h1 style="color: #2fc5bd">mobile:</h1>
-    <ul>
-      <li>ionic, capacitor</li>
-    </ul>
-  </div>
-  <div class="frontend">
-    <h1 style="color: #1648ea">ci/cd</h1>
-    <ul>
-      <li>docker</li>
-    </ul>
-  </div>
-</div>
+</WrappCategories>
 
 <style>
   .frontend {

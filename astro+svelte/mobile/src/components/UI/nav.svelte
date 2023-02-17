@@ -6,17 +6,18 @@
    * @type {Array<string[]>}
    */
   var sections = [
-    ["Skills", "img/axes.png", "Skills"],
-    ["Stack", "img/crown.png", "Github repos"],
-    ["Contacts", "img/helmet.png", "Contacts"]
+    ["skills", "img/axes.png", "Skills"],
+    ["stack", "img/crown.png", "Github repos"],
+    ["contacts", "img/helmet.png", "Contacts"],
   ];
 
   /**
-   * 
+   *
    * @param {string} category
-   * @returns {import("../../stores/settings-context.js").infoSettings} 
+   * @returns {import("../../stores/settings-context.js").infoSettings}
    */
-  var close = (category) => ContextSettings.update(() => ({ category, go: false, close: false }));
+  var close = (category) =>
+    ContextSettings.update(() => ({ category, go: false, close: false }));
 </script>
 
 {#each sections as [category, icon, title]}

@@ -1,5 +1,15 @@
-<!-- svelte-ignore security-anchor-rel-noreferrer -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore security-anchor-rel-noreferrer -->
+
+<script context="module">
+  // @ts-check
+  import WrappCategories from "./wrappCategories.svelte";
+  
+   /**
+   * @type {string}
+   */
+  var category = "stack";
+</script>
 
 <script>
   /**
@@ -29,32 +39,34 @@
   }
 </script>
 
-<div id="stacks">
-  <h1>Github repos:</h1>
-  <div id="wrappListStack">
-    {#if error === 0}
-      {#if !loading}
-        <span class="loader" />
+<WrappCategories {category}>
+  <div id="stacks">
+    <h1>Github repos:</h1>
+    <div id="wrappListStack">
+      {#if error === 0}
+        {#if !loading}
+          <span class="loader" />
+        {:else}
+          {#each repos as repo}
+            {#if repo.topics.length}
+              <div class="wrapperStack">
+                <a href={`${repo.html_url}`} target="_blank" class="git">
+                  <div class="stack">
+                    {#each repo.topics as r}
+                      <div class={`icon icon_${r}`} />
+                    {/each}
+                  </div>
+                </a>
+              </div>
+            {/if}
+          {/each}
+        {/if}
       {:else}
-        {#each repos as repo}
-          {#if repo.topics.length}
-            <div class="wrapperStack">
-              <a href={`${repo.html_url}`} target="_blank" class="git">
-                <div class="stack">
-                  {#each repo.topics as r}
-                    <div class={`icon icon_${r}`} />
-                  {/each}
-                </div>
-              </a>
-            </div>
-          {/if}
-        {/each}
+        <p>Error!</p>
       {/if}
-    {:else}
-      <p>Error!</p>
-    {/if}
+    </div>
   </div>
-</div>
+</WrappCategories>
 
 <style>
   #wrappListStack {
@@ -107,7 +119,7 @@
     text-align: center;
     background: rgba(160, 196, 77, 0.51);
     position: absolute;
-    right: 0;
+    z-index: 1;
   }
   #stacks h1 {
     font-family: "KreepTown";

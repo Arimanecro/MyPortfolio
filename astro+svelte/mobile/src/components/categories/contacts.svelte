@@ -1,11 +1,25 @@
-<div class="infoBlock contact">
-  <h1>contacts</h1>
-  <p class="infostring"><span>FIRST NAME:</span> Serghey</p>
-  <p class="infostring"><span>LAST NAME:</span> Didac</p>
-  <p class="infostring"><span>LOCATION:</span> MOLDOVA</p>
-  <p class="infostring">arimanecro@gmail.com</p>
-  <p class="infostring"><span>Download CV:</span> <a href="/cv.html" class="pdf" download></a></p>
-</div>
+<!-- svelte-ignore a11y-missing-content -->
+<script context="module">
+  // @ts-check
+  import WrappCategories from "./wrappCategories.svelte";
+  /**
+   * @type {string}
+   */
+  var category = "contacts";
+</script>
+
+<WrappCategories {category}>
+  <div class="infoBlock contact">
+    <h1>contacts</h1>
+    <p class="infostring"><span>FIRST NAME:</span> Serghey</p>
+    <p class="infostring"><span>LAST NAME:</span> Didac</p>
+    <p class="infostring"><span>LOCATION:</span> MOLDOVA</p>
+    <p class="infostring">arimanecro@gmail.com</p>
+    <p class="infostring">
+      <span>Download CV:</span> <a href="/cv.html" class="pdf" download />
+    </p>
+  </div>
+</WrappCategories>
 
 <style>
   .contact p {
@@ -41,7 +55,7 @@
     background: url("/img/html2.png") no-repeat;
     background-size: contain;
   }
-  .infostring > span { 
+  .infostring > span {
     text-decoration: underline;
   }
 </style>

@@ -12,7 +12,7 @@ import { writable, get } from "svelte/store";
 export let ContextSettings = writable({
   go: true,
   close: false,
-  category: 'skills'
+  category: ''
 });
 
-export const getStore = get;
+// export const getStore = get;
