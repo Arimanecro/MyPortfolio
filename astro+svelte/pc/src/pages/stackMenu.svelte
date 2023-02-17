@@ -12,7 +12,7 @@
    */
   $: error = 0;
   /**
-   * @type {string[]}
+   * @type {string | undefined[]}
    */
   $: repos = [,];
   /**

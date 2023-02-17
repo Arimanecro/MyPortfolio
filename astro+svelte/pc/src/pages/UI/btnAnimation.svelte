@@ -1,7 +1,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script>
   import { ContextSettings } from "../../stores/wizard-context.js";
-
+  
   /**
    *  @type {boolean}
    */

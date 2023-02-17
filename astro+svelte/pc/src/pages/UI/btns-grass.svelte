@@ -1,4 +1,5 @@
 <script>
+  // @ts-check
   import { onMount } from "svelte";
 
   /**
@@ -17,6 +18,7 @@
   onMount(() => {
     var interval = setInterval(() => {
       if (!first) {
+        // @ts-ignore
         first = document.getElementById("first");
         count1 = checkMargin();
         count2 = checkMargin2();
@@ -33,9 +35,11 @@
     let margin = localStorage?.first?.slice(0, -2);
 
     return margin
+      // @ts-ignore
       ? document.getElementById("wrappListStack")?.children?.length -
           6 -
           Math.abs(margin / 50)
+      // @ts-ignore
       : document.getElementById("wrappListStack")?.children.length - 6;
   };
 
@@ -48,7 +52,7 @@
   };
 
   /**
-   * @returns {Storage}
+   * @returns {string | void}
    */
   var up = () => {
     if (count1) {
@@ -58,22 +62,22 @@
         first.style.marginTop =
           String(Number(first?.style.marginTop.slice(0, -2)) + Number("-300")) +
           "px";
-        localStorage.first = first.style.marginTop;
+        return localStorage.first = first.style.marginTop;
       } else {
         first.style.marginTop =
           String(
             Number(first.style.marginTop.slice(0, -2)) +
               Number(-`${count1 * 50}`)
           ) + "px";
-        localStorage.first = first.style.marginTop;
         count2 += count1;
         count1 = 0;
+        return localStorage.first = first.style.marginTop;
       }
     }
   };
 
   /**
-   * @returns {Storage}
+   * @returns {Storage[string]}
    */
   var down = () => {
     if (count2) {
@@ -83,16 +87,16 @@
         first.style.marginTop =
           String(Number(first.style.marginTop.slice(0, -2)) + Number("300")) +
           "px";
-        localStorage.first = first.style.marginTop;
+        return localStorage.first = first.style.marginTop;
       } else {
         first.style.marginTop =
           String(
             Number(first.style.marginTop.slice(0, -2)) +
               Number(`${count2 * 50}`)
           ) + "px";
-        localStorage.first = first.style.marginTop;
         count1 += count2;
         count2 = 0;
+        return localStorage.first = first.style.marginTop;
       }
     }
   };

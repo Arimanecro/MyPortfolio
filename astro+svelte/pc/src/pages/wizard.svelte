@@ -1,4 +1,5 @@
 <script context="module">
+  // @ts-check
   /**
    * @param {string[]} arr
    * @returns {string[]}
