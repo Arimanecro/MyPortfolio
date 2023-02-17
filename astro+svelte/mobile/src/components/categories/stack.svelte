@@ -114,8 +114,8 @@
   }
   #stacks {
     width: 100vw;
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
+    overflow: scroll;
     text-align: center;
     background: rgba(160, 196, 77, 0.51);
     position: absolute;
